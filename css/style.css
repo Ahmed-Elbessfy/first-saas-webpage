@@ -1,0 +1,386 @@
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.7rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+input {
+  font-size: 0.9rem;
+}
+
+textarea {
+  font-size: 0.9rem;
+}
+
+p {
+  font-family: "josefin slab";
+}
+
+input {
+  font-family: "josefin slab";
+}
+
+textarea {
+  font-family: "josefin slab";
+}
+
+h1 {
+  font-family: "Amatic SC";
+}
+
+h2 {
+  font-family: "Amatic SC";
+}
+
+h3 {
+  font-family: "Amatic SC";
+}
+
+h4 {
+  font-family: "Amatic SC";
+}
+
+h5 {
+  font-family: "Amatic SC";
+}
+
+h6 {
+  font-family: "Amatic SC";
+}
+
+a {
+  font-family: "Amatic SC";
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: 15px;
+  font-family: "josefin slab", "helvetica", "times new roman", serif;
+}
+
+body {
+  padding: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  letter-spacing: 1px;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6e5e5ec2), color-stop(#6e5e5ea6), to(#6e5e5ec2)), url("../img/alexei-scutari-483642-unsplash.jpg") center center no-repeat;
+  background: linear-gradient(#6e5e5ec2, #6e5e5ea6, #6e5e5ec2), url("../img/alexei-scutari-483642-unsplash.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 0;
+  padding-top: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #76c38f;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
+p::first-letter {
+  text-transform: uppercase;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+header nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+header nav .logo {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.2rem;
+}
+
+header nav .logo p {
+  font-family: "Fredericka the Great";
+  letter-spacing: 1px;
+  font-size: 1.7rem;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+header nav ul li a.active {
+  background: #76c38f;
+}
+
+header .main-head {
+  grid-column: 1/-1;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 1rem;
+}
+
+header .main-head .info {
+  max-width: 30rem;
+  margin: auto;
+}
+
+header .main-head .info p {
+  text-indent: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header .main-head .info a {
+  background-color: #76c38f;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 2px dashed #fff;
+}
+
+header .main-head .pic {
+  margin: auto;
+  height: 22rem;
+  width: 22rem;
+}
+
+header .main-head .pic img {
+  margin: auto;
+  border: 15px solid #6b6b6b;
+  border-radius: 50%;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+main section {
+  padding: 1rem 0 3rem;
+  position: relative;
+}
+
+main section#services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+main section#services h2 {
+  grid-column: 1/-1;
+}
+
+main section#services .service {
+  text-align: center;
+}
+
+main section#services .service img {
+  max-width: 12rem;
+}
+
+main section#services .service p {
+  width: 80%;
+  max-width: 22rem;
+  margin: auto;
+}
+
+main section#portfolio {
+  text-align: center;
+}
+
+main section#portfolio:after {
+  height: 0;
+}
+
+main section#portfolio .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1.5rem;
+}
+
+footer {
+  background: #303030;
+  color: #fff;
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-gap: 1.5rem;
+}
+
+footer .contact input,
+footer .contact textarea {
+  background-color: #222;
+  color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  width: 80%;
+  min-width: 16rem;
+  margin: 0.1rem;
+}
+
+footer .contact textarea {
+  height: 5rem;
+}
+
+footer .contact input[type=submit] {
+  border: 1px inset #fff;
+  width: 7rem;
+  min-width: 1px;
+}
+
+footer .social {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+footer .social .facebook {
+  display: inline-block;
+  background: url("../img/social/facebook.png");
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+footer .social .github {
+  display: inline-block;
+  background: url("../img/social/github.png");
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+footer .social .twitter {
+  display: inline-block;
+  background: url("../img/social/twitter.png");
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+footer .social .codepen {
+  display: inline-block;
+  background: url("../img/social/codepen.png");
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+footer .social .linkedin {
+  display: inline-block;
+  background: url("../img/social/linkedin.png");
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+footer .rights {
+  grid-column-end: -1;
+}
+
+@media (min-width: 835px) {
+  .contact {
+    grid-column-end: -1;
+  }
+}
+
+header::after, main section::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: #6b6b6b;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+/*# sourceMappingURL=style.css.map */

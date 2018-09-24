@@ -1,0 +1,251 @@
+// general file rules
+@import "_general";
+
+//project file rules
+@mixin gridDim ($min, $max, $gab) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min, $max));
+    grid-gap: $gab;
+}
+
+$main-cl: #fff;
+$main-bg: #303030;
+$sec-cl: #76c38f;
+
+html {
+    letter-spacing: 1px;
+}
+
+body {
+    background: linear-gradient(#6e5e5ec2, #6e5e5ea6, #6e5e5ec2), url("../img/alexei-scutari-483642-unsplash.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 0;
+    padding-top: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    color: $main-cl;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: $sec-cl;
+    display: inline-block;
+    margin-bottom: 0.2rem;
+}
+
+p::first-letter {
+    text-transform: uppercase;
+}
+
+header {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+
+    @extend %separator;
+
+    nav {
+        @include gridDim(22rem, 1fr, 1rem);
+        justify-items: center;
+        margin-bottom: 2rem;
+
+        .logo {
+            text-transform: uppercase;
+            color: $main-cl;
+            padding: 0.2rem;
+
+            p {
+                font-family: "Fredericka the Great";
+                letter-spacing: 1px;
+                font-size: 1.7rem;
+            }
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                margin-left: 1rem;
+
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $main-cl;
+                    padding: 0.5rem;
+                    font-weight: 600;
+                }
+
+                a.active {
+                    background: $sec-cl;
+                }
+            }
+        }
+    }
+
+    .main-head {
+        grid-column: 1/-1;
+        width: 100%;
+        @include gridDim(22rem, 1fr, 1rem);
+
+        .info {
+            max-width: 30rem;
+            margin: auto;
+
+            p {
+                text-indent: 1rem;
+                line-height: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            a {
+                background-color: $sec-cl;
+                color: $main-cl;
+                display: inline-block;
+                padding: 0.5rem 0.8rem;
+                font-weight: bold;
+                font-size: 1.4rem;
+                border: 2px dashed $main-cl
+            }
+        }
+
+        .pic {
+            margin: auto;
+            height: 22rem;
+            width: 22rem;
+
+            img {
+                margin: auto;
+                border: 15px solid #6b6b6b;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+main {
+    width: 90%;
+    margin: auto;
+
+
+    section {
+        padding: 1rem 0 3rem;
+        position: relative;
+        @extend %separator;
+
+    }
+
+    section#services {
+        @include gridDim(16rem, 1fr, 2rem);
+        justify-items: center;
+
+        h2 {
+            grid-column: 1/-1;
+        }
+
+        .service {
+            text-align: center;
+
+            img {
+                max-width: 12rem;
+            }
+
+            p {
+                width: 80%;
+                max-width: 22rem;
+                margin: auto;
+            }
+        }
+    }
+
+    section#portfolio {
+        text-align: center;
+
+        &:after {
+            height: 0;
+        }
+
+        .gallery {
+            @include gridDim(15rem, 1fr, 1.5rem)
+        }
+    }
+}
+
+footer {
+    background: $main-bg;
+    color: $main-cl;
+    padding: 2rem;
+    @include gridDim(16rem, 1fr, 1.5rem);
+
+    .contact {
+
+        input,
+        textarea {
+            background-color: #222;
+            color: $main-cl;
+            padding: 0.5rem;
+            border: 1px solid $main-bg;
+            border-radius: 8px;
+            width: 80%;
+            min-width: 16rem;
+            margin: 0.1rem;
+        }
+
+        textarea {
+            height: 5rem;
+        }
+
+        input[type=submit] {
+            border: 1px inset #fff;
+            width: 7rem;
+            min-width: 1px;
+        }
+    }
+
+    .social {
+        grid-column-start: 1;
+
+        $socialList: facebook github twitter codepen linkedin;
+
+        @each $link in $socialList {
+            .#{$link} {
+                display: inline-block;
+                background: url("../img/social/#{$link}.png");
+                background-size: cover;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .rights {
+        grid-column-end: -1;
+    }
+
+}
+
+@media (min-width:835px) {
+    .contact {
+        grid-column-end: -1;
+    }
+}
+
+
+//placeholders
+
+%separator {
+    &::after {
+        content: "";
+        width: 80%;
+        height: 2px;
+        background-color: #6b6b6b;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+    }
+}

@@ -1,0 +1,92 @@
+//Variables
+//You need to assign these values
+
+//font families
+$main-ff: "josefin slab"; //paragraphs and most of elements
+$headers-ff: "Amatic SC"; //headers
+$sec-ff: "Amatic SC"; //secondary elements such as : links
+
+//setting font-size for all elements
+$font-sizes : (p:1, h1:4, h2:3.2, h3:2.4, h4:2, h5:1.7, h6:1.2, input:0.9, textarea:0.9);
+
+@each $element,
+$fz in $font-sizes {
+    #{$element} {
+        font-size: #{$fz}rem;
+    }
+}
+
+//setting font-family for all elements 
+//$main font family
+@each $item in p input textarea {
+    #{$item} {
+        font-family: $main-ff;
+    }
+}
+
+//$headers font family
+@each $header in h1 h2 h3 h4 h5 h6 {
+    #{$header} {
+        font-family: $headers-ff;
+    }
+}
+
+//$secondary font family
+@each $item in a {
+    #{$item} {
+        font-family: $sec-ff;
+    }
+}
+
+//placeholders 
+//Add here every FIXED rules needs prefixes 
+%box-size {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//mixin 
+//Add here every rule needs prefixes and takes arguments 
+@mixin box-shadow($h, $v, $blur, $spread, $col) {
+    -webkit-box-shadow: $h $v $blur $spread $col;
+    -moz-box-shadow: $h $v $blur $spread $col;
+    -o-box-shadow: $h $v $blur $spread $col;
+    -ms-box-shadow: $h $v $blur $spread $col;
+    box-shadow: $h $v $blur $spread $col;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    @extend %box-size;
+}
+
+//1 rem unit equals 15px
+html {
+    font-size: 15px;
+    font-family: $main-ff, "helvetica", "times new roman", serif;
+}
+
+//default padding
+body {
+    padding: 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+//Helper Classes
