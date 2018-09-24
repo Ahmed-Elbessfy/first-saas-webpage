@@ -225,6 +225,7 @@ header .main-head .pic img {
   margin: auto;
   border: 15px solid #6b6b6b;
   border-radius: 50%;
+  height: 100%;
 }
 
 main {
